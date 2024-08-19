@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-opacity-30 backdrop-blur-sm bg-white border-gray-200">
+        <nav className="fixed top-0 left-0 right-0 bg-opacity-60 backdrop-blur-sm bg-white border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="wayv.png" className="h-8" alt="WayV 로고" />
