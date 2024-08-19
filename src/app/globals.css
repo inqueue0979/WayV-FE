@@ -67,3 +67,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: "Pretendard-Light";
+  font-weight: 300;
+  src: url("/fonts/Pretendard/Pretendard-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-weight: 500;
+  src: url("/fonts/Pretendard/Pretendard-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-weight: 700;
+  src: url("/fonts/Pretendard/Pretendard-Bold.woff2") format("woff2");
+}
+
+html {
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.Pretendard-Light {
+  font-family: "Pretendard-Light", sans-serif;
+}
+
+.Pretendard-Bold {
+  font-family: "Pretendard-Bold", sans-serif;
+}
