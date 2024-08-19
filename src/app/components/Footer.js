@@ -16,7 +16,7 @@ export default function Footer() {
                             <p className="hover:underline">Contact | jowonjae@kookmin.ac.kr</p>
                         </li>
                         <li className="mt-2">
-                            <p className="hover:underline">Sponsorship | SK행복나눔재단</p>
+                            <p className="hover:underline">Sponsorship | SK행복나눔재단 LOOKIE</p>
                         </li>
                     </ul>
                 </div>
