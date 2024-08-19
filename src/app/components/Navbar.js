@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <nav className="fixed top-0 left-0 right-0 bg-opacity-30 backdrop-blur-sm bg-white border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="wayv.png" className="h-8" alt="WayV 로고" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap Pretendard-Bold dark:text-white">WayV 4.20</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap Pretendard-Bold">WayV 4.20</span>
             </Link>
             <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                 <span className="sr-only">Open main menu</span>
@@ -16,15 +16,12 @@ export default function Navbar() {
                 </svg>
             </button>
             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                 <li>
-                <Link href="/" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">홈</Link>
+                <Link href="/" className=" Pretendard-Bold block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-500 md:p-0  md:dark:text-blue-500" aria-current="page">솔루션 홈</Link>
                 </li>
                 <li>
-                <Link href="https://amused-scorpio-28c.notion.site/WayV4-20-e67679a8f5394d1dae96eebf96ea96dc?pvs=4" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">팀 소개</Link>
-                </li>
-                <li>
-                <Link href="/solution" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">솔루션</Link>
+                <Link href="https://amused-scorpio-28c.notion.site/WayV4-20-e67679a8f5394d1dae96eebf96ea96dc?pvs=4" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">팀 소개</Link>
                 </li>
             </ul>
             </div>
