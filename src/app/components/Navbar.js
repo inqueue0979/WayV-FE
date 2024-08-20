@@ -23,6 +23,12 @@ export default function Navbar() {
                 <li>
                 <Link href="https://amused-scorpio-28c.notion.site/WayV4-20-e67679a8f5394d1dae96eebf96ea96dc?pvs=4" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">팀 소개</Link>
                 </li>
+                <li>
+                    <p> | </p>
+                </li>
+                <li>
+                <Link href="/" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">로그인</Link>
+                </li>
             </ul>
             </div>
         </div>
