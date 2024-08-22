@@ -37,7 +37,7 @@ export default function Home() {
             <p className="text-md">제출</p>
           </Link>
         </div>
-        <h1 className="text-md m-4 text-center">* 아직 작동 안 해요,,</h1>
+        <h1 className="text-md m-4 text-center">* 국제 기준 (WCAG) 으로 작동 중, KWCAG 기준 제작 중..</h1>
       </div>
     </main>
   );
