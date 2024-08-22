@@ -22,7 +22,7 @@ function HomeContent() {
             const fetchData = async () => {
                 setLoading(true); // 데이터를 가져오기 시작할 때 로딩 상태를 true로 설정
                 try {
-                    const response = await fetch("https://api.jowonjae.kro.kr/joijui/sites?url=" + value_url); // URL 파라미터로 받은 링크로 데이터 가져오기
+                    const response = await fetch("https://oci.jowonjae.kro.kr/check-accessibility?url=" + value_url); // URL 파라미터로 받은 링크로 데이터 가져오기
                     if (response.ok) {
                         const data = await response.json();
                         setResponseData(data); // 가져온 데이터를 상태로 저장
@@ -58,10 +58,6 @@ export default function Home() {
     return (
         <Suspense fallback={<Loading />}>
             <main className="mt-20">
-                <div className="flex w-full max-w-sm items-center space-x-2">
-                    <Input id="Link" placeholder="링크 입력" />
-                    <Button type="submit">제출</Button>
-                </div>
                 <HomeContent />
             </main>
         </Suspense>
