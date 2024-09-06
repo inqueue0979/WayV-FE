@@ -102,13 +102,13 @@ export default function Home() {
   const value_url = params.get("url");
 
   // API URLs with the query parameter
-  const videoCaptionUrl = `http://192.168.0.4:5500/video_caption?url=${value_url}`;
-  const contrastUrl = `http://192.168.0.4:5500/contrast?url=${value_url}`;
-  const keyboardUrl = `http://192.168.0.4:5500/keyboard?url=${value_url}`;
-  const focusUrl = `http://192.168.0.4:5500/focus?url=${value_url}`;
-  const tableStructureUrl = `http://192.168.0.4:5500/table_structure?url=${value_url}`;
-  const labelUrl = `http://192.168.0.4:5500/label?url=${value_url}`;
-  const altTextUrl = `http://192.168.0.4:5500/alt_text?url=${value_url}`;
+  const videoCaptionUrl = `https://oci.jowonjae.kro.kr/video_caption?url=${value_url}`;
+  const contrastUrl = `https://oci.jowonjae.kro.kr/contrast?url=${value_url}`;
+  const keyboardUrl = `https://oci.jowonjae.kro.kr/keyboard?url=${value_url}`;
+  const focusUrl = `https://oci.jowonjae.kro.kr/focus?url=${value_url}`;
+  const tableStructureUrl = `https://oci.jowonjae.kro.kr/table_structure?url=${value_url}`;
+  const labelUrl = `https://oci.jowonjae.kro.kr/label?url=${value_url}`;
+  const altTextUrl = `https://oci.jowonjae.kro.kr/alt_text?url=${value_url}`;
 
   return (
     <main className="m-16 mt-20">
