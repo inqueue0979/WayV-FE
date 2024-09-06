@@ -26,7 +26,7 @@ export default function Home() {
         <div className="flex w-full max-w-xl items-center space-x-2">
           <Input
             id="Link"
-            placeholder="링크 입력"
+            placeholder="링크 입력 (HTTP/HTTPS 명시)"
             value={link}
             onChange={(e) => setLink(e.target.value)}  // Input 값 업데이트
           />
