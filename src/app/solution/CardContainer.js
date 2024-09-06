@@ -99,13 +99,13 @@ function CheckCard({ title, apiUrl, buttonText }) {
 
 export default function CardContainer({ valueUrl }) {
   // URL을 받아 각 API 엔드포인트 구성
-  const videoCaptionUrl = `oci.jowonjae.kro.kr/video_caption?url=${valueUrl}`;
-  const contrastUrl = `oci.jowonjae.kro.kr/contrast?url=${valueUrl}`;
-  const keyboardUrl = `oci.jowonjae.kro.kr/keyboard?url=${valueUrl}`;
-  const focusUrl = `oci.jowonjae.kro.kr/focus?url=${valueUrl}`;
-  const tableStructureUrl = `oci.jowonjae.kro.kr/table_structure?url=${valueUrl}`;
-  const labelUrl = `oci.jowonjae.kro.kr/label?url=${valueUrl}`;
-  const altTextUrl = `oci.jowonjae.kro.kr/alt_text?url=${valueUrl}`;
+  const videoCaptionUrl = `https://oci.jowonjae.kro.kr/video_caption?url=${valueUrl}`;
+  const contrastUrl = `https://oci.jowonjae.kro.kr/contrast?url=${valueUrl}`;
+  const keyboardUrl = `https://oci.jowonjae.kro.kr/keyboard?url=${valueUrl}`;
+  const focusUrl = `https://oci.jowonjae.kro.kr/focus?url=${valueUrl}`;
+  const tableStructureUrl = `https://oci.jowonjae.kro.kr/table_structure?url=${valueUrl}`;
+  const labelUrl = `https://oci.jowonjae.kro.kr/label?url=${valueUrl}`;
+  const altTextUrl = `https://oci.jowonjae.kro.kr/alt_text?url=${valueUrl}`;
 
   return (
     <div>
