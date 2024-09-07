@@ -106,6 +106,7 @@ export default function CardContainer({ valueUrl }) {
   const tableStructureUrl = `https://oci.jowonjae.kro.kr/table_structure?url=${valueUrl}`;
   const labelUrl = `https://oci.jowonjae.kro.kr/label?url=${valueUrl}`;
   const altTextUrl = `https://oci.jowonjae.kro.kr/alt_text?url=${valueUrl}`;
+  const linkAccessibilityUrl = `https://oci.jowonjae.kro.kr/link_accessibility?url=${valueUrl}`; // 링크 접근성 검사 추가
 
   return (
     <div>
@@ -143,6 +144,11 @@ export default function CardContainer({ valueUrl }) {
         title="대체 텍스트 검사 (Alt Text Check)"
         apiUrl={altTextUrl}
         buttonText="대체 텍스트 검사 시작"
+      />
+      <CheckCard
+        title="링크 접근성 검사 (Link Accessibility Check)" // 링크 접근성 검사 카드 추가
+        apiUrl={linkAccessibilityUrl}
+        buttonText="링크 접근성 검사 시작"
       />
     </div>
   );
