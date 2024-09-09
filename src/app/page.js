@@ -14,8 +14,8 @@ export default function Home() {
         <div className="bg-gradient-to-r from-blue-300 to-green-300 p-4 rounded-3xl mb-1">
           <Image src="/wayv.png" alt="WayV 로고" width={100} height={100} />
         </div>
-        <p className="Pretendard-Bold text-xl">WayV 4.20</p>
-        <p className="text-md"><strong className="Pretendard-Bold">웹 접근성</strong> 검사 툴킷</p>
+        <p className="Pretendard-Bold text-xl">웹브릿지</p>
+        <p className="text-sm"><strong className="Pretendard-Bold">웹 접근성</strong> 검사 툴킷</p>
         <div className="mt-8">
           <h1 className="text-2xl m-4 text-center">
             <strong className="Pretendard-Bold">링크 입력 한 번</strong>으로<br />
