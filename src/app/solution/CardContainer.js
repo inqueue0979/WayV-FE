@@ -33,15 +33,50 @@ function CheckCard({ title, apiUrl, buttonText }) {
     }
   };
 
-  const renderValue = (value) => {
-    if (typeof value === 'object' && value !== null) {
-      return JSON.stringify(value);
-    }
-    if (typeof value === 'boolean') {
-      return value ? 'True' : 'False';
-    }
-    return value;
-  };
+  // renderValue 함수를 배열과 객체에 맞게 수정합니다.
+const renderValue = (value) => {
+  if (Array.isArray(value)) {
+    // 배열의 경우 각 항목을 테이블로 렌더링
+    if (value.length === 0) return <p>데이터가 없습니다.</p>;
+    return (
+      <table className="min-w-full bg-white mt-4">
+        <thead>
+          <tr>
+            {Object.keys(value[0]).map((key) => (
+              <th key={key} className="py-2 px-4 border-b">{key}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {value.map((item, index) => (
+            <tr key={index}>
+              {Object.values(item).map((v, idx) => (
+                <td key={idx} className="py-2 px-4 border-b">{v !== null ? v.toString() : 'N/A'}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  }
+
+  if (typeof value === 'object' && value !== null) {
+    // 객체의 경우 키와 값을 표시
+    return (
+      <div className="mt-4">
+        {Object.entries(value).map(([key, val]) => (
+          <p key={key}><strong>{key}:</strong> {val !== null ? val.toString() : 'N/A'}</p>
+        ))}
+      </div>
+    );
+  }
+
+  if (typeof value === 'boolean') {
+    return value ? 'True' : 'False';
+  }
+
+  return value || 'N/A'; // 기본 값이 없는 경우 'N/A'로 표시
+};
 
   return (
     <div className="border p-4 rounded-lg mb-4">
@@ -99,14 +134,14 @@ function CheckCard({ title, apiUrl, buttonText }) {
 
 export default function CardContainer({ valueUrl }) {
   // URL을 받아 각 API 엔드포인트 구성
-  const videoCaptionUrl = `http://inqueue0979.iptime.org:5500/video_caption?url=${valueUrl}`;
-  const contrastUrl = `http://inqueue0979.iptime.org:5500/contrast?url=${valueUrl}`;
-  const keyboardUrl = `http://inqueue0979.iptime.org:5500/keyboard?url=${valueUrl}`;
-  const focusUrl = `http://inqueue0979.iptime.org:5500/focus?url=${valueUrl}`;
-  const tableStructureUrl = `http://inqueue0979.iptime.org:5500/table_structure?url=${valueUrl}`;
-  const labelUrl = `http://inqueue0979.iptime.org:5500/label?url=${valueUrl}`;
-  const altTextUrl = `http://inqueue0979.iptime.org:5500/alt_text?url=${valueUrl}`;
-  const linkAccessibilityUrl = `http://inqueue0979.iptime.org:5500/link_accessibility?url=${valueUrl}`; // 링크 접근성 검사 추가
+  const videoCaptionUrl = `https://tgrs.api-jowonjae.kro.kr/video_caption?url=${valueUrl}`;
+  const contrastUrl = `https://tgrs.api-jowonjae.kro.kr/contrast?url=${valueUrl}`;
+  const keyboardUrl = `https://tgrs.api-jowonjae.kro.kr/keyboard?url=${valueUrl}`;
+  const focusUrl = `https://tgrs.api-jowonjae.kro.kr/focus?url=${valueUrl}`;
+  const tableStructureUrl = `https://tgrs.api-jowonjae.kro.kr/table_structure?url=${valueUrl}`;
+  const labelUrl = `https://tgrs.api-jowonjae.kro.kr/label?url=${valueUrl}`;
+  const altTextUrl = `https://tgrs.api-jowonjae.kro.kr/alt_text?url=${valueUrl}`;
+  const linkAccessibilityUrl = `https://tgrs.api-jowonjae.kro.kr/link_accessibility?url=${valueUrl}`; // 링크 접근성 검사 추가
 
   return (
     <div>
