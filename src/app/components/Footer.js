@@ -14,7 +14,7 @@ export default function Footer() {
                     </Link>
                     <ul className="text-gray-400 font-medium mt-2">
                         <li className="mt-2">
-                            <p className="hover:underline">Contact | solveitwayv@gmail.com</p>
+                            <p className="hover:underline">Contact | solveitfgwayv@gmail.com</p>
                         </li>
                         <li className="mt-2">
                             <p className="hover:underline">Sponsorship | SK행복나눔재단 LOOKIE</p>

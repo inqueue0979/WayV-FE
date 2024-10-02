@@ -176,12 +176,12 @@ export default function CardContainer({ valueUrl }) {
         buttonText="레이블 제공 확인 시작"
       />
       <CheckCard
-        title="대체 텍스트 검사 (Alt Text Check)"
+        title="대체 텍스트 검사 (Alt Text Check) - (AI 기반 검사 추가 예정)"
         apiUrl={altTextUrl}
         buttonText="대체 텍스트 검사 시작"
       />
       <CheckCard
-        title="링크 접근성 검사 (Link Accessibility Check)" // 링크 접근성 검사 카드 추가
+        title="링크 접근성 검사 (Link Accessibility Check) - (AI 기반 검사 추가 예정)" // 링크 접근성 검사 카드 추가
         apiUrl={linkAccessibilityUrl}
         buttonText="링크 접근성 검사 시작"
       />
