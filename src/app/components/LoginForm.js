@@ -45,8 +45,8 @@ export default function LoginForm() {
             로그인
           </Button>
             <hr className="border-gray-300" />
-          <Button variant="outline" className="w-full">
-            <img src="google.png" className=" w-6 h-6 mr-2" onClick={() => signIn('google', { callbackUrl: '/' })}></img>Google 계정으로 로그인
+          <Button variant="outline" className="w-full" onClick={() => signIn('google', { callbackUrl: '/' })}>
+            <img src="google.png" className=" w-6 h-6 mr-2"></img>Google 계정으로 로그인
           </Button>
         </div>
         <div className="mt-4 text-center text-sm">
