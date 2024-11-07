@@ -21,9 +21,9 @@ export default function Home({ searchParams }) {
           </TabsList>
           <TabsContent value="summary">
             <div className="grid grid-cols-3 gap-x-4">
-              <OpeningCard Title="접근성 준수 비율" Description="프로젝트 내의 코드들의 총 접근성 비율" Content="88.2%" Footer="* 80% 이상 목표" />
-              <OpeningCard Title="최근의 접근성 준수 비율" Description="3일 내 접근성 비율 상승률" Content="+ 28.4%" Footer="* 1h 마다 Refresh" />
-              <OpeningCard Title="Webridge 총 사용량" Description="프로젝트 시작 시점으로부터 솔루션 사용 총량" Content="289" Footer="* 프로젝트 시작 2024. 11. 01 ~" />
+              <OpeningCard Title="접근성 준수 비율" Description="프로젝트 내의 코드들의 총 접근성 비율" Content="제공 예정" Footer="* 80% 이상 목표" />
+              <OpeningCard Title="최근의 접근성 준수 비율" Description="3일 내 접근성 비율 상승률" Content="제공 예정" Footer="* Refresh Rate - 1h" />
+              <OpeningCard Title="Webridge 총 사용량" Description="프로젝트 시작 시점으로부터 솔루션 사용 총량" Content="제공 예정" Footer="* 프로젝트 시작 2024. 11. 01 ~" />
             </div>
           </TabsContent>
           <TabsContent value="details">

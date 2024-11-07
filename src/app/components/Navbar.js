@@ -9,6 +9,12 @@ export default function Navbar() {
 
     const { data: session } = useSession(); //세션 정보를 가져옴
 
+    // permission에 따라서 계정 단계를 나타냄
+    // permission: 'basic', 'pro', 'admin' 중 하나
+    // 'basic'은 유료 계정 비활성화 버튼을 보여주지 않음
+    // 'pro'와 'admin'은 유료 계정 비활성화 버튼을 보여줌
+    const permission = session?.user.permission;
+
     return (
         <nav className="fixed top-0 left-0 right-0 bg-opacity-60 backdrop-blur-sm bg-white border-gray-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -44,8 +50,19 @@ export default function Navbar() {
                                     alt="Google 프로필 사진"
                                     className="w-6 h-6 rounded-full"
                                 />
+                                
+                                {permission === 1 ? (
+                                    <span className="text-xs Pretendard-Bold text-white ml-2 rounded-lg p-1 bg-emerald-500">Basic</span>
+                                ) : null}
+                                {permission === 2 ? (
+                                    <span className="text-xs Pretendard-Bold text-white ml-2 rounded-lg p-1 bg-blue-500">Pro</span>
+                                ) : null}
+                                {permission === 9 ? (
+                                    <span className="text-xs Pretendard-Bold text-white ml-2 rounded-lg p-1 bg-slate-950">Admin</span>
+                                ) : null}
+
                                 <span className="ml-2">{session.user.name}</span>
-                                <span className="text-xs Pretendard-Bold text-white ml-3 rounded-lg p-1 bg-zinc-500">유료 계정 비활성화</span>
+
                             </button>
                         ) : (
                             <Link href="/login" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">로그인</Link>
