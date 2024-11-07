@@ -16,11 +16,10 @@ export default function Home() {
         </div>
         <p className="Pretendard-Bold text-xl">웹브릿지</p>
         <p className="text-sm"><strong className="Pretendard-Bold">웹 접근성</strong> 검사 툴킷</p>
-        <div className="mt-8">
-          <h1 className="text-2xl m-4 text-center">
-            <strong className="Pretendard-Bold">링크 입력 한 번</strong>으로<br />
-            <strong className="Pretendard-Bold">웹 접근성</strong>을 확인해 보세요!
-          </h1>
+        <div className="mt-2">
+          <p className="text-md m-4 text-center">
+            <strong className="Pretendard-Bold">링크 입력 한 번</strong>으로<br></br><strong className="Pretendard-Bold">웹 접근성</strong>을 확인해 보세요!
+          </p>
         </div>
 
         <div className="flex w-full max-w-xl items-center space-x-2">
