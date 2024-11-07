@@ -3,6 +3,8 @@ import "./globals.css";
 import Footer from "./components/Footer.js";
 import Navbar from "./components/Navbar.js";
 
+import SessionProviderWrapper from "./components/SessionProviderWrapper";
+
 export const metadata = {
   title: "WayV 4.20",
   description: "SK LOOKIE WayV 4.20",
@@ -12,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko">
       <body className="">
+        <SessionProviderWrapper>
         <Navbar />
         {children}
         <Footer />
+        </SessionProviderWrapper>
       </body>
     </html>
   );
