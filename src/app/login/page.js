@@ -1,11 +1,12 @@
 "use client";
 
 import { signIn } from 'next-auth/react';
+import LoginForm from '../components/LoginForm';
 
 function LoginPage() {
   return (
-    <div className=' mt-20'>
-      <button onClick={() => signIn('google', { callbackUrl: '/' })}>Google로 로그인</button>
+    <div className="flex items-center justify-center h-screen">
+      <LoginForm />
     </div>
   );
 }
