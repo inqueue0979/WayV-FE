@@ -31,10 +31,7 @@ export default function Navbar() {
                 <div className="hidden w-full md:flex md:items-center md:w-auto" id="navbar-default">
                     <ul className="flex items-center space-x-8 font-medium flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0">
                         <li>
-                            <Link href="/" className="Pretendard-Bold block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-500 md:p-0 md:dark:text-blue-500" aria-current="page">솔루션 홈</Link>
-                        </li>
-                        <li>
-                            <Link href="https://amused-scorpio-28c.notion.site/WayV4-20-e67679a8f5394d1dae96eebf96ea96dc?pvs=4" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">팀 소개</Link>
+                            <Link href="https://solveitwayv.vercel.app" className="Pretendard-Bold block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-500 md:p-0 md:dark:text-blue-500" aria-current="page">팀 페이지</Link>
                         </li>
                         <li>
                             <p>|</p>

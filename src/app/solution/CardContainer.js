@@ -176,7 +176,7 @@ export default function CardContainer({ valueUrl }) {
         buttonText="레이블 제공 확인 시작"
       />
       <CheckCard
-        title="대체 텍스트 검사 (Alt Text Check) - (AI 기반 검사 추가 예정)"
+        title="대체 텍스트 검사 (Alt Text Check)"
         apiUrl={altTextUrl}
         buttonText="대체 텍스트 검사 시작"
       />
