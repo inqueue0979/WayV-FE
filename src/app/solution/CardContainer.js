@@ -140,7 +140,7 @@ export default function CardContainer({ valueUrl }) {
   const focusUrl = `https://tgrs.api-jowonjae.kro.kr/focus?url=${valueUrl}`;
   const tableStructureUrl = `https://tgrs.api-jowonjae.kro.kr/table_structure?url=${valueUrl}`;
   const labelUrl = `https://tgrs.api-jowonjae.kro.kr/label?url=${valueUrl}`;
-  const altTextUrl = `https://tgrs.api-jowonjae.kro.kr/alt_text?url=${valueUrl}`;
+  const altTextUrl = `https://tgrs.api-jowonjae.kro.kr/check_ai?url=${valueUrl}`;
   const linkAccessibilityUrl = `https://tgrs.api-jowonjae.kro.kr/link_accessibility?url=${valueUrl}`; // 링크 접근성 검사 추가
 
   return (

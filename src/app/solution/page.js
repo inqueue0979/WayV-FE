@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import CardContainer from './CardContainer'; // 클라이언트 컴포넌트로 분리
 import OpeningCard from '../components/solution/Overview/OpeningCard';
+import { Button } from '@/components/ui/button';
 
 export default function Home({ searchParams }) {
     const value_url = searchParams?.url || ""; // URL 파라미터를 서버에서 읽어 클라이언트 컴포넌트로 전달
@@ -27,9 +28,17 @@ export default function Home({ searchParams }) {
             </div>
           </TabsContent>
           <TabsContent value="details">
-            <Suspense fallback={<p>Loading...</p>}>
-              <CardContainer valueUrl={value_url} /> {/* URL을 프롭스로 전달 */}
-            </Suspense>
+            <div>
+              <p className="text-xl Pretendard-Bold mb-1 mt-4">검사 시작하기</p>
+              <p>아래 버튼을 눌러 웹 접근성 검사를 시작할 수 있습니다. 검사가 완료되면 결과를 확인할 수 있습니다.</p>
+
+              <div className='mt-2 mb-4'>
+                <Button className="bg-slate-800 hover:bg-slate-600">인공지능 미사용 검사 시작하기</Button>
+                <Button className="ml-2 bg-green-600 hover:bg-green-800">인공지능 사용 검사 시작하기 (Pro 기능)</Button>
+              </div>
+            </div>
+            
+            <CardContainer valueUrl={value_url} /> {/* URL을 프롭스로 전달 */}
           </TabsContent>
         </Tabs>
       </main>
