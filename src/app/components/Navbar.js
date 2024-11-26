@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
+import { usePathname } from "next/navigation"; // 현재 경로를 가져오는 훅
 import { Project_Combobox } from "./projects/Project_Combobox";
 import { User_Profile_Dropdown } from "./User_Profile_Dropdown";
 
 export default function Navbar() {
 
-    const { data: session } = useSession(); //세션 정보를 가져옴
+    const { data: session } = useSession(); // 세션 정보를 가져옴
+    const pathname = usePathname(); // 현재 경로를 가져옴
 
     // 세션에서 토큰 개수를 가져옴
     const token = session?.user.token;
@@ -22,7 +24,8 @@ export default function Navbar() {
                         <img src="wayv.png" className="h-8" alt="WayV 로고" />
                     </Link>
 
-                    {session ? (
+                    {/* 경로에 따라 Project_Combobox 또는 webridge를 렌더링 */}
+                    {session && pathname.startsWith("/dashboard") ? (
                         <Project_Combobox />
                     ) : (
                         <p className="SUIT-SB text-2xl">webridge</p>
@@ -48,5 +51,5 @@ export default function Navbar() {
                 </div>
             </div>
         </nav>
-    )
+    );
 }
