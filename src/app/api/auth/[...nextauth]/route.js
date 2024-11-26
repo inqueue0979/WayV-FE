@@ -22,7 +22,7 @@ const handler = NextAuth({
           name: user.name,
           email: user.email,
           image: user.image,
-          permission: 1, // 기본 권한을 'basic'으로 설정
+          token: 0, // 기본 토큰 0으로 설정
           lastLogin: new Date().toISOString(),
         });
       } else {
@@ -40,10 +40,10 @@ const handler = NextAuth({
 
       if (userDoc.exists()) {
         const userData = userDoc.data();
-        session.user.permission = userData.permission; // 세션에 Firestore에서 가져온 권한 설정
+        session.user.token = userData.token; // 세션에 Firestore에서 가져온 권한 설정
         session.user.image = userData.image || token.picture; // Firestore나 Google 이미지 사용
       } else {
-        session.user.permission = 1; // 데이터가 없으면 기본 권한 제공
+        session.user.token = 0; // 데이터가 없으면 기본 권한 제공
       }
 
       return session;

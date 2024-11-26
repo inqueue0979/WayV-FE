@@ -134,14 +134,14 @@ function CheckCard({ title, apiUrl, buttonText }) {
 
 export default function CardContainer({ valueUrl }) {
   // URL을 받아 각 API 엔드포인트 구성
-  const videoCaptionUrl = `https://tgrs.api-jowonjae.kro.kr/video_caption?url=${valueUrl}`;
-  const contrastUrl = `https://tgrs.api-jowonjae.kro.kr/contrast?url=${valueUrl}`;
-  const keyboardUrl = `https://tgrs.api-jowonjae.kro.kr/keyboard?url=${valueUrl}`;
-  const focusUrl = `https://tgrs.api-jowonjae.kro.kr/focus?url=${valueUrl}`;
-  const tableStructureUrl = `https://tgrs.api-jowonjae.kro.kr/table_structure?url=${valueUrl}`;
-  const labelUrl = `https://tgrs.api-jowonjae.kro.kr/label?url=${valueUrl}`;
-  const altTextUrl = `https://tgrs.api-jowonjae.kro.kr/alt_text?url=${valueUrl}`;
-  const linkAccessibilityUrl = `https://tgrs.api-jowonjae.kro.kr/link_accessibility?url=${valueUrl}`; // 링크 접근성 검사 추가
+  const videoCaptionUrl = `http://127.0.0.1:5500/video_caption?url=${valueUrl}`;
+  const contrastUrl = `http://127.0.0.1:5500/contrast?url=${valueUrl}`;
+  const keyboardUrl = `http://127.0.0.1:5500/keyboard?url=${valueUrl}`;
+  const focusUrl = `http://127.0.0.1:5500/focus?url=${valueUrl}`;
+  const tableStructureUrl = `http://127.0.0.1:5500/table_structure?url=${valueUrl}`;
+  const labelUrl = `http://127.0.0.1:5500/label?url=${valueUrl}`;
+  const altTextUrl = `http://127.0.0.1:5500/alt_text?url=${valueUrl}`;
+  const linkAccessibilityUrl = `http://127.0.0.1:5500/link_accessibility?url=${valueUrl}`; // 링크 접근성 검사 추가
 
   return (
     <div>
