@@ -7,7 +7,7 @@ export const metadata = {
   description: "",
 };
 
-export default function DashboardLayout({ children }) {
+export default function ProfileLayout({ children }) {
   return (
     <section>
         <Navbar />

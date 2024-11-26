@@ -52,7 +52,7 @@ import {
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => window.location.href = '/profile'}>
               내 프로필
             </DropdownMenuItem>
             <DropdownMenuItem>
