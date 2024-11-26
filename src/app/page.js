@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="flex text-center space-x-2">
           <Link
-            href={`/projects`} className="bg-black text-white py-2 px-4 rounded-lg text-center hover:bg-gray-700">
+            href={`/dashboard`} className="bg-black text-white py-2 px-4 rounded-lg text-center hover:bg-gray-700">
             <p className="text-md">지금 사용하러 가기</p>
           </Link>
         </div>
