@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer.js";
-import Navbar from "./components/deprecated/Navbar.js";
+import Navbar from "./components/Navbar.js";
 
 import SessionProviderWrapper from "./components/SessionProviderWrapper";
 
@@ -15,7 +15,9 @@ export default function DashboardLayout({ children }) {
     <html>
       <body>
         <SessionProviderWrapper>
-        {children}
+          <Navbar />
+          {children}
+          <Footer />
         </SessionProviderWrapper>
       </body>
     </html>

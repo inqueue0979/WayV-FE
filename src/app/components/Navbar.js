@@ -25,7 +25,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* 경로에 따라 Project_Combobox 또는 webridge를 렌더링 */}
-                    {session && pathname.startsWith("/dashboard") ? (
+                    {session && pathname.startsWith("/dashboard") || pathname.startsWith("/project") ? (
                         <Project_Combobox />
                     ) : (
                         <p className="SUIT-SB text-2xl">webridge</p>

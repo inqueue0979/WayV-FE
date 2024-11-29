@@ -1,6 +1,4 @@
 import "../globals.css";
-import Footer from "../components/Footer.js";
-import Navbar from "../components/Navbar.js";
 
 export const metadata = {
   title: "웹브릿지 대시보드",
@@ -10,9 +8,7 @@ export const metadata = {
 export default function ProfileLayout({ children }) {
   return (
     <section>
-        <Navbar />
         {children}
-        <Footer />
     </section>
   );
 }

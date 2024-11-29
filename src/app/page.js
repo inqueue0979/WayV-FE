@@ -12,7 +12,6 @@ export default function Home() {
 
   return (
     <section>
-      <Navbar />
       <main className="flex items-center justify-center min-h-screen">
       <div className="flex flex-col items-center justify-center">
         <div className="bg-gradient-to-r from-blue-300 to-green-300 p-4 rounded-3xl mb-1">
@@ -34,7 +33,6 @@ export default function Home() {
         </div>
       </div>
     </main>
-    <Footer />
     </section>
     
   );
