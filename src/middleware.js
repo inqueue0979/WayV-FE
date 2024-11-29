@@ -17,7 +17,7 @@ export const config = {
   matcher: [
     "/",              // 루트 경로 보호
     "/dashboard/:path*", // "/dashboard" 및 하위 경로 보호
-    "/projects/:path*",  // "/projects" 및 하위 경로 보호
+    "/project/:path*",  // "/project" 및 하위 경로 보호
     "/profile/:path*",   // "/profile" 및 하위 경로 보호
   ],
 };
@@ -31,7 +31,7 @@ export function middleware(req) {
     console.log("[Middleware] Authenticated user attempted to access '/'. Redirecting to '/dashboard'.");
     return NextResponse.redirect(new URL("/dashboard", req.url));
   }
-  else if (!token && req.nextUrl.pathname.startsWith("/dashboard")) {
+  else if (!token && (req.nextUrl.pathname.startsWith("/dashboard") || req.nextUrl.pathname.startsWith("/project") || req.nextUrl.pathname.startsWith("/profile"))) {
     console.log("[Middleware] Unauthenticated user attempted to access '/dashboard'. Redirecting to '/login'.");
     return NextResponse.redirect(new URL("/login", req.url));
   }
