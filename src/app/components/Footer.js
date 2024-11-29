@@ -9,7 +9,7 @@ export default function Footer() {
               <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
                     <Link href="/" className="flex items-center">
-                        <img src="wayv_white.png" className="h-8 me-3" alt="WayV Logo" />
+                        <img src="/wayv_white.png" className="h-8 me-3" alt="WayV Logo" />
                         <span className="self-center text-2xl whitespace-nowrap Pretendard-Bold text-white">WayV 4.20</span>
                     </Link>
                     <ul className="text-gray-400 font-medium mt-2">

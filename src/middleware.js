@@ -34,7 +34,7 @@ export function middleware(req) {
   else if (!token && (req.nextUrl.pathname.startsWith("/dashboard") || req.nextUrl.pathname.startsWith("/project") || req.nextUrl.pathname.startsWith("/profile"))) {
     console.log("[Middleware] Unauthenticated user attempted to access '/dashboard'. Redirecting to '/login'.");
     return NextResponse.redirect(new URL("/login", req.url));
-  }
+  } 
 
   // 기본 동작을 유지
   return NextResponse.next();

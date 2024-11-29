@@ -17,7 +17,7 @@ export default function Project_Card({ Title, project_id, Description }) {
             <Card>
             <CardHeader>
                 <Image src="/wayv.png" alt="Project Image" width={24} height={24} /> 
-                <CardTitle className="text-xl">{Title}</CardTitle>
+                <CardTitle className="text-xl Pretendard-Bold">{Title}</CardTitle>
                 <CardDescription>{project_id}</CardDescription>
             </CardHeader>
             <CardContent>

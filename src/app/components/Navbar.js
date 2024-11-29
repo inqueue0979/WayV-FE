@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
                 <div className=" flex gap-3"> 
                     <Link href="/" className="flex items-center space-x-3">
-                        <img src="wayv.png" className="h-8" alt="WayV 로고" />
+                        <img src="/wayv.png" className="h-8" alt="WayV 로고" />
                     </Link>
 
                     {/* 경로에 따라 Project_Combobox 또는 webridge를 렌더링 */}

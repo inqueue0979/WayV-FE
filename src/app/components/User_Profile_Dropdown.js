@@ -36,7 +36,7 @@ import {
               <span className="ml-2 Pretendard-Bold">{session.user.name}</span>
 
               <span className="text-sm Pretendard-Bold text-white ml-5 rounded-lg p-1 px-5 py-1 bg-black flex items-center">
-                  <img src="token.png" alt="토큰 수" className="w-4 h-4 mr-2" />
+                  <img src="/token.png" alt="토큰 수" className="w-4 h-4 mr-2" />
                   {token}
               </span>
           </button>
